@@ -1,5 +1,21 @@
 version: '3.8'
 services:
+  client:
+    container_name: population-client
+    image: population-client
+    build:
+      context: client
+      dockerfile: Dockerfile
+      target: runner
+    depends_on:
+      - server
+    networks:
+      - client-server
+    ports:
+      - ${CLIENT_PORT}:${CLIENT_PORT}
+    volumes:
+      - ./client:/usr/app/client
+    command: npm run dev
   server:
     container_name: population-server
     image: population-server
@@ -11,12 +27,13 @@ services:
       - ${SERVER_PORT}:${SERVER_PORT}
     networks:
       - server-db
+      - client-server
     depends_on:
       - mongodb
     env_file:
       - ./server/.env
     volumes:
-      - ./server/src:/usr/src/server/src
+      - ./server/src:/usr/app/server/src
     restart: always
     command: npm run start:dev
   mongodb:
@@ -45,6 +62,8 @@ services:
       - ${MONGO_EXPRESS_PORT}:${MONGO_EXPRESS_PORT}
 
 networks:
+  client-server:
+    driver: bridge
   server-db:
     driver: bridge
 volumes:
