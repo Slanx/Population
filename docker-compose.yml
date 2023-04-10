@@ -12,7 +12,10 @@ services:
     networks:
       - client-server
     ports:
-      - ${CLIENT_PORT}:3000
+      - ${CLIENT_PORT}:${CLIENT_PORT}
+    environment:
+      - PORT=${CLIENT_PORT}
+      - SERVER_PORT=${SERVER_PORT}
     volumes:
       - ./client/src:/usr/app/client/src
   server:
@@ -29,6 +32,8 @@ services:
       - client-server
     depends_on:
       - mongodb
+    environment:
+      - SERVER_PORT=${SERVER_PORT}
     env_file:
       - ./server/.env
     volumes:
