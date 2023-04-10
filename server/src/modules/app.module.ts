@@ -3,6 +3,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { APP_PIPE } from '@nestjs/core';
 import { MongooseModule } from '@nestjs/mongoose';
 import { getMongoConfig } from 'src/configs/mongo.config';
+import { ResidentsModule } from './residents/residents.module';
+import { CityModule } from './city/city.module';
 
 @Module({
   imports: [
@@ -15,6 +17,8 @@ import { getMongoConfig } from 'src/configs/mongo.config';
       inject: [ConfigService],
       useFactory: getMongoConfig,
     }),
+    CityModule,
+    ResidentsModule,
   ],
   providers: [
     {

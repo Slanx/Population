@@ -3,6 +3,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /usr/app/client
 
 COPY package*.json ./
+
 RUN npm ci
 
 COPY . .
@@ -40,9 +41,5 @@ COPY --from=build --chown=nextjs:nodejs /usr/app/client/.next/standalone ./
 COPY --from=build --chown=nextjs:nodejs /usr/app/client/.next/static ./.next/static
 
 USER nextjs
-
-EXPOSE 3000
-
-ENV PORT 3000
 
 CMD [ "npm", "run", "start" ]

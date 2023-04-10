@@ -10,7 +10,6 @@ export const getMongoConfig = async (
 };
 
 const getMongoString = (configService: ConfigService) => {
-  console.log(configService.get('MONGO_PORT'));
   return (
     'mongodb://' +
     configService.get('MONGO_USER') +
