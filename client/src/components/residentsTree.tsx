@@ -1,32 +1,32 @@
+import type { RawNodeDatum, RenderCustomNodeElementFn } from 'react-d3-tree/lib/types/types/common';
 import { Box, Tooltip } from '@chakra-ui/react';
-import type { RenderCustomNodeElementFn } from 'react-d3-tree/lib/types/types/common';
 import dynamic from 'next/dynamic';
-import { Level, useSpreedTree } from '@/hooks/useSpreedTree';
-import residents from '@/data/residents.json';
-import { useEffect } from 'react';
+import { FC, useState } from 'react';
+import { Resident, GroupType } from '@/interfaces/resident.interface';
 
 const Tree = dynamic(() => import('react-d3-tree'), {
   ssr: false,
 });
 
-interface ResidentsTreeProps {
-  levels: Level[];
+export const initalRoot: RawNodeDatum = {
+  name: 'Жители',
+  children: [],
+};
+
+export interface ResidentsTreeProps {
+  initialTree: RawNodeDatum;
 }
 
-const ResidentsTree = ({ levels }: ResidentsTreeProps) => {
-  const { tree, setSpreedTree } = useSpreedTree({
-    level: levels,
-  });
-
-  useEffect(() => {
-    setSpreedTree(residents);
-  }, [setSpreedTree]);
+const ResidentsTree: FC<ResidentsTreeProps> = ({ initialTree }) => {
+  const [tree, setTree] = useState<RawNodeDatum>(initialTree);
 
   const RenderCustomNodeElementFn: RenderCustomNodeElementFn = ({ nodeDatum, toggleNode }) => (
     <Tooltip
-      label={`${nodeDatum.name}${
-        nodeDatum.attributes?.type ? `, население: ${nodeDatum.attributes?.type}` : ''
-      }`}
+      label={
+        nodeDatum.attributes?.city
+          ? `${nodeDatum.attributes.city}, население: ${nodeDatum.attributes?.data}`
+          : nodeDatum.name
+      }
     >
       <g>
         <rect width='20' height='20' x='-10' onClick={toggleNode} />
@@ -51,3 +51,34 @@ const ResidentsTree = ({ levels }: ResidentsTreeProps) => {
 };
 
 export default ResidentsTree;
+
+export function addResident(tree: RawNodeDatum, resident: Resident) {
+  const { city, groups, name } = resident;
+  let currentNode = tree;
+
+  Object.values(GroupType).forEach((level) => {
+    const group = groups.find((residentGroup) => residentGroup.type === level);
+
+    if (!group) throw new Error('Invalid groups');
+
+    let node = currentNode.children?.find((node) => node.name === group.name);
+
+    if (!node) {
+      node = { name: group.name, attributes: { type: level }, children: [] };
+      currentNode.children?.push(node);
+    }
+
+    currentNode = node;
+  });
+
+  const newResident: RawNodeDatum = {
+    name,
+    attributes: {
+      city: city.name,
+      data: city.data,
+    },
+  };
+  currentNode.children?.push(newResident);
+
+  return tree;
+}

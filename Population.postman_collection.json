@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "232a1607-4e0a-44d2-836d-8c173515d081",
+		"name": "Population",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21446769"
+	},
+	"item": [
+		{
+			"name": "city",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{city}}",
+							"host": [
+								"{{city}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Нижний Новгород\",\r\n    \"data\":100500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{city}}",
+							"host": [
+								"{{city}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{city}}/:id",
+							"host": [
+								"{{city}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{city}}/title/:name",
+							"host": [
+								"{{city}}"
+							],
+							"path": [
+								"title",
+								":name"
+							],
+							"variable": [
+								{
+									"key": "name",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{city}}/:id",
+							"host": [
+								"{{city}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{city}}/:id",
+							"host": [
+								"{{city}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "resident",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{residents}}",
+							"host": [
+								"{{residents}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{residents}}/:id",
+							"host": [
+								"{{residents}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "64339f621850794698393e8e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groups\":[\r\n                    {\r\n                \"type\": \"city\",\r\n                \"name\": \"Санкт-Петербург г.\",\r\n                \"_id\": \"64339f621850794698393e8f\"\r\n            },\r\n            {\r\n                \"type\": \"district\",\r\n                \"name\": \"Пресненский р-н\",\r\n                \"_id\": \"64339f621850794698393e90\"\r\n            },\r\n            {\r\n                \"type\": \"street\",\r\n                \"name\": \"Гашека ул.\",\r\n                \"_id\": \"64339f621850794698393e91\"\r\n            }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{residents}}/:id",
+							"host": [
+								"{{residents}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6433b2ef46eb82f8e55fcdf9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{residents}}/:id",
+							"host": [
+								"{{residents}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "64339f621850794698393e92"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Андрей\",\r\n    \"groups\":[{\"type\":\"street\", \"name\":\"Измайловская ул.\"},{\"type\":\"district\", \"name\":\"Мачулищи р-н.\"},{\"type\":\"city\", \"name\":\"Нижн Новгород г.\"}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{residents}}",
+							"host": [
+								"{{residents}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
