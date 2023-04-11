@@ -1,0 +1,852 @@
+[
+  {
+    "name": "Анна",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Пресненский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Гашека ул."
+      }
+    ]
+  },
+  {
+    "name": "Степан",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Пресненский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Рочдельская ул."
+      }
+    ]
+  },
+  {
+    "name": "Виктор",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Коптево р-н"
+      },
+      {
+        "type": "street",
+        "name": "Нарвская ул."
+      }
+    ]
+  },
+  {
+    "name": "Алексей",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Коптево р-н"
+      },
+      {
+        "type": "street",
+        "name": "Коптевская ул."
+      }
+    ]
+  },
+  {
+    "name": "Ярослав",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Отрадное р-н"
+      },
+      {
+        "type": "street",
+        "name": "Сигнальный проезд"
+      }
+    ]
+  },
+  {
+    "name": "Антонина",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Отрадное р-н"
+      },
+      {
+        "type": "street",
+        "name": "Отрадная ул."
+      }
+    ]
+  },
+  {
+    "name": "Григорий",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Воронеж г."
+      },
+      {
+        "type": "district",
+        "name": "Советский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Патриотов пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Александр",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Воронеж г."
+      },
+      {
+        "type": "district",
+        "name": "Советский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Кривошеина ул."
+      }
+    ]
+  },
+  {
+    "name": "Владимир",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Воронеж г."
+      },
+      {
+        "type": "district",
+        "name": "Центральный р-н"
+      },
+      {
+        "type": "street",
+        "name": "Ленина ул."
+      }
+    ]
+  },
+  {
+    "name": "Василий",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Воронеж г."
+      },
+      {
+        "type": "district",
+        "name": "Центральный р-н"
+      },
+      {
+        "type": "street",
+        "name": "Рабочий пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Яков",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Выборгский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Светлановский пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Виктория",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Выборгский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Орбели ул."
+      }
+    ]
+  },
+  {
+    "name": "Николай",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Фрунзенский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Лиговский пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Валентин",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Фрунзенский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Воронежская ул."
+      }
+    ]
+  },
+  {
+    "name": "Михаил",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Пресненский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Гашека ул."
+      }
+    ]
+  },
+  {
+    "name": "Арсений",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Пресненский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Гашека ул."
+      }
+    ]
+  },
+  {
+    "name": "Варвара",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Пресненский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Рочдельская ул."
+      }
+    ]
+  },
+  {
+    "name": "Вячеслав",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Отрадное р-н"
+      },
+      {
+        "type": "street",
+        "name": "Сигнальный проезд"
+      }
+    ]
+  },
+  {
+    "name": "Владислав",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Отрадное р-н"
+      },
+      {
+        "type": "street",
+        "name": "Сигнальный проезд"
+      }
+    ]
+  },
+  {
+    "name": "Светлана",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Выборгский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Светлановский пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Константин",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Выборгский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Орбели ул."
+      }
+    ]
+  },
+  {
+    "name": "Мирослава",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Выборгский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Орбели ул."
+      }
+    ]
+  },
+  {
+    "name": "Семен",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Фрунзенский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Лиговский пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Ульяна",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Фрунзенский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Лиговский пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Влада",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Фрунзенский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Лиговский пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Наталья",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Фрунзенский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Воронежская ул."
+      }
+    ]
+  },
+  {
+    "name": "Ирина",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Фрунзенский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Воронежская ул."
+      }
+    ]
+  },
+  {
+    "name": "Кира",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Фрунзенский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Воронежская ул."
+      }
+    ]
+  },
+  {
+    "name": "Роман",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Коптево р-н"
+      },
+      {
+        "type": "street",
+        "name": "Нарвская ул."
+      }
+    ]
+  },
+  {
+    "name": "Иван",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Коптево р-н"
+      },
+      {
+        "type": "street",
+        "name": "Нарвская ул."
+      }
+    ]
+  },
+  {
+    "name": "Антон",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Воронеж г."
+      },
+      {
+        "type": "district",
+        "name": "Советский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Патриотов пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Томара",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Воронеж г."
+      },
+      {
+        "type": "district",
+        "name": "Советский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Патриотов пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Юлия",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Воронеж г."
+      },
+      {
+        "type": "district",
+        "name": "Центральный р-н"
+      },
+      {
+        "type": "street",
+        "name": "Рабочий пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Петр",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Воронеж г."
+      },
+      {
+        "type": "district",
+        "name": "Центральный р-н"
+      },
+      {
+        "type": "street",
+        "name": "Рабочий пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Елена",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Воронеж г."
+      },
+      {
+        "type": "district",
+        "name": "Центральный р-н"
+      },
+      {
+        "type": "street",
+        "name": "Рабочий пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Валентина",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Воронеж г."
+      },
+      {
+        "type": "district",
+        "name": "Центральный р-н"
+      },
+      {
+        "type": "street",
+        "name": "Рабочий пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Татьяна",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Воронеж г."
+      },
+      {
+        "type": "district",
+        "name": "Центральный р-н"
+      },
+      {
+        "type": "street",
+        "name": "Рабочий пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Ян",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Выборгский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Орбели ул."
+      }
+    ]
+  },
+  {
+    "name": "Ольга",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Выборгский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Орбели ул."
+      }
+    ]
+  },
+  {
+    "name": "Анатолий",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Выборгский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Орбели ул."
+      }
+    ]
+  },
+  {
+    "name": "Степан",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Пресненский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Гашека ул."
+      }
+    ]
+  },
+  {
+    "name": "Павел",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Пресненский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Гашека ул."
+      }
+    ]
+  },
+  {
+    "name": "Григорий",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Пресненский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Гашека ул."
+      }
+    ]
+  },
+  {
+    "name": "Валерий",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Отрадное р-н"
+      },
+      {
+        "type": "street",
+        "name": "Сигнальный проезд"
+      }
+    ]
+  },
+  {
+    "name": "Леонид",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Коптево р-н"
+      },
+      {
+        "type": "street",
+        "name": "Нарвская ул."
+      }
+    ]
+  },
+  {
+    "name": "Тимофей",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Коптево р-н"
+      },
+      {
+        "type": "street",
+        "name": "Нарвская ул."
+      }
+    ]
+  },
+  {
+    "name": "Олег",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Коптево р-н"
+      },
+      {
+        "type": "street",
+        "name": "Нарвская ул."
+      }
+    ]
+  },
+  {
+    "name": "Олег",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Санкт-Петербург г."
+      },
+      {
+        "type": "district",
+        "name": "Фрунзенский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Лиговский пр-т"
+      }
+    ]
+  },
+  {
+    "name": "Дмитрий",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Воронеж г."
+      },
+      {
+        "type": "district",
+        "name": "Советский р-н"
+      },
+      {
+        "type": "street",
+        "name": "Кривошеина ул."
+      }
+    ]
+  },
+  {
+    "name": "Жан",
+    "groups": [
+      {
+        "type": "city",
+        "name": "Москва г."
+      },
+      {
+        "type": "district",
+        "name": "Коптево р-н"
+      },
+      {
+        "type": "street",
+        "name": "Коптевская ул."
+      }
+    ]
+  }
+]
