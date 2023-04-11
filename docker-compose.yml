@@ -16,7 +16,6 @@ services:
     environment:
       - PORT=${CLIENT_PORT}
       - SERVER_PORT=${SERVER_PORT}
-      - HOST=server
     volumes:
       - ./client/src:/usr/app/client/src
   server:

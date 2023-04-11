@@ -72,6 +72,19 @@ export class CityService implements OnModuleInit {
     return city;
   }
 
+  async search(paginationQuery: PaginationQueryDto, title: string) {
+    const { limit, offset } = paginationQuery;
+
+    const city = await this.cityModel
+      .find({ name: new RegExp(title, 'i') })
+      .skip(offset)
+      .limit(limit)
+      .sort({ name: 1, data: -1 })
+      .exec();
+
+    return city;
+  }
+
   async update(id: string, updateCityDto: UpdateCityDto) {
     const city = await this.cityModel.findByIdAndUpdate(
       id,

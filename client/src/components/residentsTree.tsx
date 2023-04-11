@@ -1,7 +1,7 @@
 import type { RawNodeDatum, RenderCustomNodeElementFn } from 'react-d3-tree/lib/types/types/common';
 import { Box, Tooltip } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
-import { FC, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 import { Resident, GroupType } from '@/interfaces/resident.interface';
 
 const Tree = dynamic(() => import('react-d3-tree'), {
@@ -35,6 +35,15 @@ const ResidentsTree: FC<ResidentsTreeProps> = ({ initialTree }) => {
         </text>
       </g>
     </Tooltip>
+  );
+
+  const addNewResident = useCallback(
+    (resident: Resident) => {
+      const newTree = addResident(tree, resident);
+
+      setTree(newTree);
+    },
+    [tree],
   );
 
   return (

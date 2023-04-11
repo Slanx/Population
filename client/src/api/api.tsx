@@ -1,13 +1,10 @@
 import axios from 'axios';
+import getConfig from 'next/config';
+
+const { publicRuntimeConfig } = getConfig();
 
 const api = axios.create({
-  baseURL: `http://${process.env.HOST}:${process.env.SERVER_PORT}`,
-  headers: {
-    'Content-Type': 'application/json',
-    Accept: 'application/json',
-  },
+  baseURL: `http://localhost:${publicRuntimeConfig.SERVER_PORT}`,
 });
-
-api.interceptors.response.use();
 
 export { api };

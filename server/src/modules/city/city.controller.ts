@@ -40,6 +40,14 @@ export class CityController {
     return this.cityService.findByTitle(name);
   }
 
+  @Get('search/:title')
+  async search(
+    @Query() paginationQuery: PaginationQueryDto,
+    @Param('title') title: string,
+  ) {
+    return this.cityService.search(paginationQuery, title);
+  }
+
   @Patch(':id')
   async update(
     @Param('id', new ParseObjectIdPipe()) id: string,

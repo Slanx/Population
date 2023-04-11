@@ -1,6 +1,7 @@
 import { City } from './city.interface';
 
 export interface Resident {
+  _id: string;
   name: string;
   city: City;
   groups: Group[];
