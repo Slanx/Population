@@ -23,11 +23,9 @@ export class ResidentsService implements OnModuleInit {
       const residentsWithCity = await Promise.all(
         residents.map(async (resident) => {
           const city = await this.getCity(resident.groups);
-
           return { ...resident, city: city.id };
         }),
       );
-
       await this.residentModel.create(residentsWithCity);
     }
   }
@@ -87,7 +85,12 @@ export class ResidentsService implements OnModuleInit {
   private async getCity(groups: Group[]) {
     const cityGroup = groups.find(({ type }) => type === GroupType.CITY);
 
-    const cityName = cityGroup.name.split(' ').slice(0, -1).join(' ');
+    let cityName = cityGroup.name;
+    const splitCityName = cityGroup.name.split(' ');
+
+    if (splitCityName.length > 1) {
+      cityName = splitCityName.slice(0, -1).join(' ');
+    }
 
     const city = await this.cityService.findByTitle(cityName);
 

@@ -6,10 +6,10 @@ import {
   Button,
   Divider,
   Heading,
-  Spinner,
-  Text,
+  useToast,
 } from '@chakra-ui/react';
 import CityService from '@/api/cityService';
+import { clear } from 'console';
 
 type FormValues = {
   name: string;
@@ -20,10 +20,10 @@ export default function CityAddForm() {
   const {
     handleSubmit,
     register,
-    formState: { errors, isSubmitting, isSubmitSuccessful, isSubmitted },
+    formState: { errors, isSubmitting },
   } = useForm<FormValues>();
 
-  const { createCity, error, loading } = CityService();
+  const { createCity } = CityService();
 
   const onSubmit: SubmitHandler<FormValues> = async ({ name, data }) => {
     await createCity({ data: +data, name });
@@ -53,21 +53,9 @@ export default function CityAddForm() {
         <FormErrorMessage>{errors.data && errors.data.message}</FormErrorMessage>
       </FormControl>
 
-      {loading ? (
-        <Spinner />
-      ) : (
-        <Button mt={4} colorScheme='teal' isLoading={isSubmitting} type='submit'>
-          Добавить город
-        </Button>
-      )}
-
-      {isSubmitSuccessful && isSubmitted ? (
-        <Text fontSize='16px' color='green'>
-          Город успешно добавлен
-        </Text>
-      ) : (
-        <Text>{error}</Text>
-      )}
+      <Button mt={4} colorScheme='teal' isLoading={isSubmitting} type='submit'>
+        Добавить город
+      </Button>
     </form>
   );
 }

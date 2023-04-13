@@ -1,7 +1,17 @@
 import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
-import { FormErrorMessage, FormControl, Input, Button, Heading, Divider } from '@chakra-ui/react';
+import {
+  FormErrorMessage,
+  FormControl,
+  Input,
+  Button,
+  Heading,
+  Divider,
+  useToast,
+} from '@chakra-ui/react';
 import { Group, GroupType, Resident } from '@/interfaces/resident.interface';
 import ResidentService from '@/api/residentSerivce';
+import { useContext } from 'react';
+import { ResidentsContext } from '@/context/residentsContext';
 
 type FormValues = {
   name: string;
@@ -28,13 +38,30 @@ export default function ResidentForm() {
     control,
   });
 
-  const { createResident, error, loading } = ResidentService();
+  const { residents, setResidents } = useContext(ResidentsContext);
+
+  const { createResident, error, clearError } = ResidentService();
+
+  const toast = useToast();
 
   const onSubmit: SubmitHandler<FormValues> = async ({ name, groups }) => {
     const newResident = await createResident({ name, groups });
-
     if (newResident) {
-      // action(newResident);
+      setResidents([...residents, newResident]);
+      toast({
+        title: `Житель ${name} успешно добавлен`,
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+      });
+    } else {
+      toast({
+        title: `Ошибка добавления жителя: ${error}`,
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+        onCloseComplete: clearError,
+      });
     }
   };
 

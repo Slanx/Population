@@ -1,15 +1,4 @@
-import { CreateResidentContext } from '@/context/createResidentContext';
-import {
-  Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  useDisclosure,
-  Divider,
-} from '@chakra-ui/react';
+import { Drawer, DrawerBody, DrawerOverlay, DrawerContent, Divider } from '@chakra-ui/react';
 import { useState, FC } from 'react';
 import CityAddForm from './CityAddForm';
 import CitySearch from './CitySearch';

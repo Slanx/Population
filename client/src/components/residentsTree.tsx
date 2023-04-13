@@ -1,24 +1,34 @@
 import type { RawNodeDatum, RenderCustomNodeElementFn } from 'react-d3-tree/lib/types/types/common';
 import { Box, Tooltip } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
-import { FC, useCallback, useState } from 'react';
+import { FC, useCallback, useContext, useEffect, useState } from 'react';
 import { Resident, GroupType } from '@/interfaces/resident.interface';
+import { ResidentsContext } from '@/context/residentsContext';
+import clone from 'clone';
 
 const Tree = dynamic(() => import('react-d3-tree'), {
   ssr: false,
 });
 
-export const initalRoot: RawNodeDatum = {
+export const initialRoot: RawNodeDatum = {
   name: 'Жители',
   children: [],
 };
 
-export interface ResidentsTreeProps {
-  initialTree: RawNodeDatum;
-}
+const ResidentsTree = () => {
+  const { residents } = useContext(ResidentsContext);
+  const [tree, setTree] = useState<RawNodeDatum | RawNodeDatum[] | null>(null);
 
-const ResidentsTree: FC<ResidentsTreeProps> = ({ initialTree }) => {
-  const [tree, setTree] = useState<RawNodeDatum>(initialTree);
+  useEffect(() => {
+    const spreadTree = residents.reduce<RawNodeDatum>(
+      (acc, resident) => {
+        return addResident(acc, resident);
+      },
+      { ...initialRoot },
+    );
+
+    setTree(spreadTree);
+  }, [residents]);
 
   const RenderCustomNodeElementFn: RenderCustomNodeElementFn = ({ nodeDatum, toggleNode }) => (
     <Tooltip
@@ -37,25 +47,15 @@ const ResidentsTree: FC<ResidentsTreeProps> = ({ initialTree }) => {
     </Tooltip>
   );
 
-  const addNewResident = useCallback(
-    (resident: Resident) => {
-      const newTree = addResident(tree, resident);
-
-      setTree(newTree);
-    },
-    [tree],
-  );
+  if (!tree) return null;
 
   return (
-    <Box style={{ width: '100vw', height: '100vh' }}>
-      <Tree
-        data={tree}
-        initialDepth={1}
-        orientation='vertical'
-        pathFunc='step'
-        renderCustomNodeElement={RenderCustomNodeElementFn}
-      />
-    </Box>
+    <Tree
+      data={tree}
+      orientation='vertical'
+      pathFunc='step'
+      renderCustomNodeElement={RenderCustomNodeElementFn}
+    />
   );
 };
 
